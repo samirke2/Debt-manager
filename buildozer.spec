@@ -8,9 +8,9 @@ source.exclude_dirs = bin, .buildozer, venv, __pycache__, .git, .github
 source.exclude_patterns = *.db
 version = 2.0.0
 
-# أضف icon.png و splash.png بجانب main.py ثم أزل علامة # من الأسطر التالية
-# icon.filename = %(source.dir)s/icon.png
-# presplash.filename = %(source.dir)s/splash.png
+# الشعار وشاشة البداية (الملفان بجانب main.py)
+icon.filename = %(source.dir)s/icon.png
+presplash.filename = %(source.dir)s/splash.png
 presplash.color = #1C4554
 
 # المتطلبات (p4a لا يثبّت الاعتماديات تلقائيًا، لذلك تُكتب كلها صراحةً)
