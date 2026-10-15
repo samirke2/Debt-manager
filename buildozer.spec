@@ -6,7 +6,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,ttf
 source.exclude_dirs = bin, .buildozer, venv, __pycache__, .git, .github
 source.exclude_patterns = *.db
-version = 2.0.0
+version = 3.0.0
 
 # الشعار وشاشة البداية (الملفان بجانب main.py)
 icon.filename = %(source.dir)s/icon.png
@@ -16,7 +16,8 @@ presplash.color = #1C4554
 # المتطلبات (p4a لا يثبّت الاعتماديات تلقائيًا، لذلك تُكتب كلها صراحةً)
 # - sqlite3 : ضروري وإلا يفشل import sqlite3 على الهاتف
 # - python-bidi==0.4.2 : النسخ الأحدث مكتوبة بـ Rust ولا تُبنى على Android
-requirements = python3,hostpython3,kivy==2.3.0,sqlite3,arabic-reshaper,python-bidi==0.4.2
+# - six : يحتاجها python-bidi 0.4.2 ولا يثبّتها p4a تلقائيًا (بدونها لا يعمل تشكيل العربية)
+requirements = python3,hostpython3,kivy==2.3.0,sqlite3,arabic-reshaper,python-bidi==0.4.2,six
 
 orientation = portrait
 fullscreen = 0
